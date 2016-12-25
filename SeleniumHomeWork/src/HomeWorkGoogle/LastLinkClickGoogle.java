@@ -21,7 +21,9 @@ public class LastLinkClickGoogle {
 		WebElement elements = driver.findElement(By.name("q"));
 				elements.sendKeys("selenium");
 					elements.submit();
+				
 					
+					driver.close();
 										
 		}}
 	

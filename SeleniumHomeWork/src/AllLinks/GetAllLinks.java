@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class GetAllLinks {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 	
 		WebDriver driver = new FirefoxDriver();
 	
@@ -24,11 +24,11 @@ public class GetAllLinks {
 	
 			System.out.println(" - " + (links.get(i).getText()));
 	
-	//Thread.sleep(5000);
+	Thread.sleep(50);
 	
 		}
 		
-		//driver.close();
+		driver.close();
 	
 		}	}
 	//***********************************************************

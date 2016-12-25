@@ -12,6 +12,9 @@ public class XpathAndElementsDemo {
 			
 			WebDriver driver = new FirefoxDriver ();
 			
+			//Wait command
+		    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		    
 			driver.get("https://www.facebook.com/");
 			
 			//Maximize Windows
@@ -28,11 +31,10 @@ public class XpathAndElementsDemo {
 			// Link elements
 		    driver.findElement(By.linkText("Sign Up")).click();
 		    
-		    //Wait command
-		    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		    
 			
 		    //Close the Application/Browser
-			//driver.close();
+			driver.close();
 			
 			
 		}

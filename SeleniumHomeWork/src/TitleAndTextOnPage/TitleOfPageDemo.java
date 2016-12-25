@@ -2,11 +2,10 @@ package TitleAndTextOnPage;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TextOnPageDemo {
+public class TitleOfPageDemo {
 	
 	public static void main(String[] args) {
 		
@@ -16,15 +15,16 @@ public class TextOnPageDemo {
 		
 		driver.get("https://www.facebook.com/");
 		
-		String expectedText = "See photos and updates";
+		//Verified the title
+		String expectedTitle = "Facebook - Log In or Sign Up";
 
-		String actualText = driver.findElement(By.xpath(".//*[@id='content']/div/div/div/div/div[1]/div[1]/div[2]/span[1]")).getText();
+		String actualTitle = driver.getTitle();
 		
-		if(expectedText.equals(actualText))
+		if(expectedTitle.equals(actualTitle))
 
 		{
 
-		System.out.println("Text is Matched");
+		System.out.println("Title is Matched");
 
 		}
 
@@ -32,7 +32,7 @@ public class TextOnPageDemo {
 
 		{
 
-		System.out.println("Text is not Matched");
+		System.out.println("Title is not Matched");
 
 		}
 		
